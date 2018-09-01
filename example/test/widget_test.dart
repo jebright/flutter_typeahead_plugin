@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_typeahead_plugin_example/main.dart';
+import '../lib/main.dart';
 import 'package:flutter_typeahead_plugin/type_ahead.dart';
 
 void main() {

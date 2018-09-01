@@ -21,11 +21,10 @@ class Search<T> {
     state = new Observable<String>(onTextChanged.stream)
         .distinct() //only care if T has changed
         // Wait for the user to stop typing for 350ms before running a search
-        .debounce(const Duration(
-            milliseconds: 350))
+        .debounce(const Duration(milliseconds: 350))
         .switchMap(_searchMap())
         // The initial state to deliver to the screen.
-        .startWith(new ServiceState.initial());        
+        .startWith(new ServiceState.initial());
   }
 
   void close() {
@@ -39,14 +38,9 @@ class Search<T> {
             ServiceState ss = new ServiceState(result: result);
             return ss;
           })
-          .doOnError((e,s) => 
-            print(s.toString())
-          )
-          .onErrorReturn( 
-              new ServiceState.error()
-          )
+          .doOnError((e, s) => print(s.toString()))
+          .onErrorReturn(new ServiceState.error())
           .startWith(new ServiceState.processing());
     };
   }
-  
 }
