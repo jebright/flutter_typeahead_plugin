@@ -1,13 +1,13 @@
 name: flutter_typeahead_plugin
 description: A simple yet flexible typeahead plugin for flutter that allows you to specify your own API to use.
-version: 0.0.2
+version: 0.0.3
 author: 'Joe Ebright <ebrightster@gmail.com>'
 homepage: https://github.com/jebright/flutter_typeahead_plugin
 
 dependencies:
   flutter:
     sdk: flutter
-  rxdart: "^0.16.6"
+  rxdart: "^0.18.1"
 
 environment:
   sdk: '>=1.19.0 <3.0.0'
